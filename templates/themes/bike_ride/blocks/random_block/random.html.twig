@@ -1,0 +1,4 @@
+{{ document | ez_richtext_to_html5 }}
+{% if content is not null %}
+{{ ez_render(content, {'viewType': 'line'}) }}
+{% endif %}

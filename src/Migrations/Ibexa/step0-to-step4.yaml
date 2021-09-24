@@ -1,0 +1,1032 @@
+-
+    type: content_type
+    mode: create
+    metadata:
+        identifier: bike_ride
+        mainTranslation: eng-GB
+        creatorId: 14
+        creationDate: '2021-01-25T15:26:54+01:00'
+        remoteId: 33810f339ab9b2971b1df2c3dc708227
+        urlAliasSchema: ''
+        nameSchema: '<title>'
+        container: false
+        defaultAlwaysAvailable: true
+        defaultSortField: 2
+        defaultSortOrder: 0
+        contentTypeGroups:
+            - Content
+        translations:
+            eng-GB:
+                name: 'Bike Ride'
+                description: ''
+    fields:
+        -
+            identifier: title
+            type: ezstring
+            position: 1
+            translations:
+                eng-GB:
+                    name: Title
+                    description: ''
+            required: true
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration:
+                StringLengthValidator:
+                    maxStringLength: null
+                    minStringLength: null
+        -
+            identifier: photo
+            type: ezimage
+            position: 2
+            translations:
+                eng-GB:
+                    name: Photo
+                    description: ''
+            required: false
+            searchable: false
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration:
+                FileSizeValidator:
+                    maxFileSize: null
+        -
+            identifier: description
+            type: ezrichtext
+            position: 3
+            translations:
+                eng-GB:
+                    name: Description
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+            fieldSettings: {  }
+            validatorConfiguration: {  }
+        -
+            identifier: difficulty
+            type: ezselection
+            position: 4
+            translations:
+                eng-GB:
+                    name: Difficulty
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: {  }
+            fieldSettings:
+                isMultiple: false
+                options:
+                    - Beginner
+                    - Intermediate
+                    - Advanced
+                multilingualOptions:
+                    eng-GB: [Beginner, Intermediate, Advanced]
+            validatorConfiguration: {  }
+        -
+            identifier: starting_point
+            type: ezgmaplocation
+            position: 5
+            translations:
+                eng-GB:
+                    name: 'Starting Point'
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration: {  }
+        -
+            identifier: ending_point
+            type: ezgmaplocation
+            position: 6
+            translations:
+                eng-GB:
+                    name: 'Ending Point'
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration: {  }
+        -
+            identifier: length
+            type: ezinteger
+            position: 7
+            translations:
+                eng-GB:
+                    name: Length
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration:
+                IntegerValueValidator:
+                    minIntegerValue: null
+                    maxIntegerValue: null
+        -
+            identifier: author
+            type: ezauthor
+            position: 8
+            translations:
+                eng-GB:
+                    name: Author
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: {  }
+            fieldSettings:
+                defaultAuthor: 0
+            validatorConfiguration: {  }
+        -
+            identifier: pois
+            type: ezobjectrelationlist
+            position: 9
+            translations:
+                eng-GB:
+                    name: 'Point Of Interests'
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue:
+                destinationContentIds: {  }
+            fieldSettings:
+                selectionMethod: 0
+                selectionDefaultLocation: 131
+                selectionContentTypes:
+                    - point_of_interest
+            validatorConfiguration:
+                RelationListValueValidator:
+                    selectionLimit: 0
+    references:
+        -
+            name: ref__bike_ride__content_type_id
+            type: content_type_id
+-
+    type: content_type
+    mode: create
+    metadata:
+        identifier: point_of_interest
+        mainTranslation: eng-GB
+        creatorId: 14
+        creationDate: '2021-01-25T15:32:12+01:00'
+        remoteId: 1b347f5cad9eefc5f17348808d4df909
+        urlAliasSchema: ''
+        nameSchema: '<title>'
+        container: false
+        defaultAlwaysAvailable: true
+        defaultSortField: 2
+        defaultSortOrder: 0
+        contentTypeGroups:
+            - Content
+        translations:
+            eng-GB:
+                name: 'Point of Interest'
+                description: ''
+    fields:
+        -
+            identifier: title
+            type: ezstring
+            position: 1
+            translations:
+                eng-GB:
+                    name: Title
+                    description: ''
+            required: true
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration:
+                StringLengthValidator:
+                    maxStringLength: null
+                    minStringLength: null
+        -
+            identifier: description
+            type: ezrichtext
+            position: 2
+            translations:
+                eng-GB:
+                    name: Description
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+            fieldSettings: {  }
+            validatorConfiguration: {  }
+        -
+            identifier: photo
+            type: ezimage
+            position: 3
+            translations:
+                eng-GB:
+                    name: Photo
+                    description: ''
+            required: false
+            searchable: false
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration:
+                FileSizeValidator:
+                    maxFileSize: null
+        -
+            identifier: photo_legend
+            type: ezrichtext
+            position: 5
+            translations:
+                eng-GB:
+                    name: 'Photo legend'
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+            fieldSettings: {  }
+            validatorConfiguration: {  }
+        -
+            identifier: place
+            type: ezgmaplocation
+            position: 6
+            translations:
+                eng-GB:
+                    name: Place
+                    description: ''
+            required: false
+            searchable: true
+            infoCollector: false
+            translatable: true
+            category: content
+            defaultValue: null
+            fieldSettings: {  }
+            validatorConfiguration: {  }
+    references:
+        -
+            name: ref__point_of_interest__content_type_id
+            type: content_type_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: folder
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:11+01:00'
+        publicationDate: '2021-01-25T17:16:11+01:00'
+        remoteId: d92892d45fddc83d27925faf9fe1c70a
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 2
+        parentLocationRemoteId: null
+        locationRemoteId: ccc0af02dc3e9ef95d53f9df607db570
+        hidden: false
+        sortField: 1
+        sortOrder: 1
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: name
+            languageCode: eng-GB
+            value: 'All Rides'
+        -
+            fieldDefIdentifier: short_name
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: short_description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__folder__all rides'
+            type: content_id
+        -
+            name: 'ref_location__folder__all rides'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: folder
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:11+01:00'
+        publicationDate: '2021-01-25T17:16:11+01:00'
+        remoteId: 06c8db392761260d3830d2ecf2d81d9e
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 2
+        parentLocationRemoteId: null
+        locationRemoteId: 8cc74484a471a13c3d2d35c0c882b960
+        hidden: false
+        sortField: 1
+        sortOrder: 1
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: name
+            languageCode: eng-GB
+            value: 'Points of Interest'
+        -
+            fieldDefIdentifier: short_name
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: short_description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>
+                    
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__folder__points of interest'
+            type: content_id
+        -
+            name: 'ref_location__folder__points of interest'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: bike_ride
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:11+01:00'
+        publicationDate: '2021-01-25T17:16:11+01:00'
+        remoteId: cbf3755d8ecce83b1e307632094795b0
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 130
+        parentLocationRemoteId: null
+        locationRemoteId: d743e9660ceb400bcd7b0ca3fb2fc10d
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Finnish coastline from Rauma to Pori'
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 8/1/6/0/618-1-eng-GB/saaristo.jpg
+                path: 8/1/6/0/618-1-eng-GB/saaristo.jpg
+                alternativeText: ''
+                fileName: saaristo.jpg
+                fileSize: 82402
+                imageId: 131-618-1
+                uri: /var/site/storage/images/8/1/6/0/618-1-eng-GB/saaristo.jpg
+                inputUri: null
+                width: '600'
+                height: '450'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para><emphasis>Following</emphasis> on the route of the <emphasis role="strong">Battenkill</emphasis>, starting from <emphasis role="underlined">Schueylerville</emphasis> and ending in Shushan this ride offers breathtaking views.</para><itemizedlist><listitem><para>Schueylerville</para></listitem><listitem><para>Battenkill</para></listitem><listitem><para>ride</para></listitem></itemizedlist></section>
+                    
+        -
+            fieldDefIdentifier: difficulty
+            languageCode: eng-GB
+            value:
+                - 1
+        -
+            fieldDefIdentifier: starting_point
+            languageCode: eng-GB
+            value:
+                latitude: 61.130885
+                longitude: 21.505926
+                address: 'Rauma, Finland'
+        -
+            fieldDefIdentifier: ending_point
+            languageCode: eng-GB
+            value:
+                latitude: 61.485139
+                longitude: 21.797418
+                address: 'Pori, Finland'
+        -
+            fieldDefIdentifier: length
+            languageCode: eng-GB
+            value: 54
+        -
+            fieldDefIdentifier: author
+            languageCode: eng-GB
+            value:
+                -
+                    id: '1'
+                    name: 'Artturi Sakari Reinikainen'
+                    email: me@ez.no
+        -
+            fieldDefIdentifier: pois
+            languageCode: eng-GB
+            value:
+                destinationContentIds: {  }
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__bike_ride__finnish coastline from rauma to pori'
+            type: content_id
+        -
+            name: 'ref_location__bike_ride__finnish coastline from rauma to pori'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: bike_ride
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:11+01:00'
+        publicationDate: '2021-01-25T17:16:11+01:00'
+        remoteId: 9d41c35658502b498b7bac700b3f6294
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 130
+        parentLocationRemoteId: null
+        locationRemoteId: 593b8c11b79d7e0147c7aa2309965f67
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Baby tour of the Battenkill'
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 6/2/6/0/626-1-eng-GB/battenkill.jpg
+                path: 6/2/6/0/626-1-eng-GB/battenkill.jpg
+                alternativeText: ''
+                fileName: battenkill.jpg
+                fileSize: 123057
+                imageId: 132-626-1
+                uri: /var/site/storage/images/6/2/6/0/626-1-eng-GB/battenkill.jpg
+                inputUri: null
+                width: '500'
+                height: '375'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para><emphasis>Following</emphasis> on the route of the <emphasis role="strong">Battenkill</emphasis>, starting from <emphasis role="underlined">Schueylerville</emphasis> and ending in Shushan this ride offers breathtaking views.</para><itemizedlist><listitem><para>Schueylerville</para></listitem><listitem><para>Battenkill</para></listitem><listitem><para>ride</para></listitem></itemizedlist></section>
+                    
+        -
+            fieldDefIdentifier: difficulty
+            languageCode: eng-GB
+            value:
+                - 1
+        -
+            fieldDefIdentifier: starting_point
+            languageCode: eng-GB
+            value:
+                latitude: 43.100076
+                longitude: -73.581783
+                address: 'Schuylerville, NY, USA'
+        -
+            fieldDefIdentifier: ending_point
+            languageCode: eng-GB
+            value:
+                latitude: 43.090319
+                longitude: -73.34293
+                address: 'Shushan, NY, USA'
+        -
+            fieldDefIdentifier: length
+            languageCode: eng-GB
+            value: 37
+        -
+            fieldDefIdentifier: author
+            languageCode: eng-GB
+            value:
+                -
+                    id: '1'
+                    name: 'Angus MacGyver'
+                    email: me@ez.no
+        -
+            fieldDefIdentifier: pois
+            languageCode: eng-GB
+            value:
+                destinationContentIds: {  }
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__bike_ride__baby tour of the battenkill'
+            type: content_id
+        -
+            name: 'ref_location__bike_ride__baby tour of the battenkill'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: bike_ride
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:12+01:00'
+        publicationDate: '2021-01-25T17:16:12+01:00'
+        remoteId: d65cfb06a8e89654aac9d789c7c028d1
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 130
+        parentLocationRemoteId: null
+        locationRemoteId: 93bcceb06796d61a52c17929904a1cca
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Meillonnas terrain track'
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 4/3/6/0/634-1-eng-GB/cabatane_full.jpg
+                path: 4/3/6/0/634-1-eng-GB/cabatane_full.jpg
+                alternativeText: ''
+                fileName: cabatane_full.jpg
+                fileSize: 142841
+                imageId: 133-634-1
+                uri: /var/site/storage/images/4/3/6/0/634-1-eng-GB/cabatane_full.jpg
+                inputUri: null
+                width: '760'
+                height: '760'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para><emphasis>Following</emphasis> on the route of the <emphasis role="strong">Battenkill</emphasis>, starting from <emphasis role="underlined">Schueylerville</emphasis> and ending in Shushan this ride offers breathtaking views.</para><itemizedlist><listitem><para>Schueylerville</para></listitem><listitem><para>Battenkill</para></listitem><listitem><para>ride</para></listitem></itemizedlist></section>
+                    
+        -
+            fieldDefIdentifier: difficulty
+            languageCode: eng-GB
+            value:
+                - 2
+        -
+            fieldDefIdentifier: starting_point
+            languageCode: eng-GB
+            value:
+                latitude: 46.245743
+                longitude: 5.351351
+                address: 'Meillonnas, France'
+        -
+            fieldDefIdentifier: ending_point
+            languageCode: eng-GB
+            value:
+                latitude: 46.323672
+                longitude: 5.385258
+                address: 'Pressiat, France'
+        -
+            fieldDefIdentifier: length
+            languageCode: eng-GB
+            value: 18
+        -
+            fieldDefIdentifier: author
+            languageCode: eng-GB
+            value:
+                -
+                    id: '1'
+                    name: 'Damien Pobel'
+                    email: me@ez.no
+        -
+            fieldDefIdentifier: pois
+            languageCode: eng-GB
+            value:
+                destinationContentIds: {  }
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__bike_ride__meillonnas terrain track'
+            type: content_id
+        -
+            name: 'ref_location__bike_ride__meillonnas terrain track'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: bike_ride
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:12+01:00'
+        publicationDate: '2021-01-25T17:16:12+01:00'
+        remoteId: 32485de9edb3b92207b3c2d56a0b8fdc
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 130
+        parentLocationRemoteId: null
+        locationRemoteId: 6fa460444e21d0ea8b75b5dc67587fc2
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Rallarvegen in Norway'
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 2/4/6/0/642-1-eng-GB/rallarvagen.jpg
+                path: 2/4/6/0/642-1-eng-GB/rallarvagen.jpg
+                alternativeText: ''
+                fileName: rallarvagen.jpg
+                fileSize: 213985
+                imageId: 134-642-1
+                uri: /var/site/storage/images/2/4/6/0/642-1-eng-GB/rallarvagen.jpg
+                inputUri: null
+                width: '1176'
+                height: '882'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para><emphasis>Following</emphasis> on the route of the <emphasis role="strong">Battenkill</emphasis>, starting from <emphasis role="underlined">Schueylerville</emphasis> and ending in Shushan this ride offers breathtaking views.</para><itemizedlist><listitem><para>Schueylerville</para></listitem><listitem><para>Battenkill</para></listitem><listitem><para>ride</para></listitem></itemizedlist></section>
+                    
+        -
+            fieldDefIdentifier: difficulty
+            languageCode: eng-GB
+            value:
+                - 1
+        -
+            fieldDefIdentifier: starting_point
+            languageCode: eng-GB
+            value:
+                latitude: 60.51199
+                longitude: 7.863081
+                address: 'Haugastøl, Hol, Norway'
+        -
+            fieldDefIdentifier: ending_point
+            languageCode: eng-GB
+            value:
+                latitude: 60.605074
+                longitude: 7.504649
+                address: 'Finse, Ulvik, Norway'
+        -
+            fieldDefIdentifier: length
+            languageCode: eng-GB
+            value: 28
+        -
+            fieldDefIdentifier: author
+            languageCode: eng-GB
+            value:
+                -
+                    id: '1'
+                    name: 'Gunnstein Lye'
+                    email: me@ez.no
+        -
+            fieldDefIdentifier: pois
+            languageCode: eng-GB
+            value:
+                destinationContentIds: {  }
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__bike_ride__rallarvegen in norway'
+            type: content_id
+        -
+            name: 'ref_location__bike_ride__rallarvegen in norway'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: bike_ride
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:17:09+01:00'
+        publicationDate: '2021-01-25T17:16:12+01:00'
+        remoteId: a6b75e9cde416559229aa4ec92473c6a
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 130
+        parentLocationRemoteId: null
+        locationRemoteId: 236837562793933c24c2878e172b2c50
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Lookouts between Coligny and Montagna-le-Reconduit'
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 0/5/6/0/650-1-eng-GB/default_ride.jpg
+                path: 0/5/6/0/650-1-eng-GB/default_ride.jpg
+                alternativeText: ''
+                fileName: default_ride.jpg
+                fileSize: 102009
+                imageId: 135-650-2
+                uri: /var/site/storage/images/0/5/6/0/650-1-eng-GB/default_ride.jpg
+                inputUri: null
+                width: '1900'
+                height: '1080'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para><emphasis>Following</emphasis> on the route of the <emphasis role="strong">Battenkill</emphasis>, starting from <emphasis role="underlined">Schueylerville</emphasis> and ending in Shushan this ride offers breathtaking views.</para><itemizedlist><listitem><para>Schueylerville</para></listitem><listitem><para>Battenkill</para></listitem><listitem><para>ride</para></listitem></itemizedlist></section>
+                    
+        -
+            fieldDefIdentifier: difficulty
+            languageCode: eng-GB
+            value:
+                - 0
+        -
+            fieldDefIdentifier: starting_point
+            languageCode: eng-GB
+            value:
+                latitude: 46.382954
+                longitude: 5.346038
+                address: 'Coligny, France'
+        -
+            fieldDefIdentifier: ending_point
+            languageCode: eng-GB
+            value:
+                latitude: 46.458554
+                longitude: 5.388351
+                address: 'Montagna-le-Reconduit, France'
+        -
+            fieldDefIdentifier: length
+            languageCode: eng-GB
+            value: 19
+        -
+            fieldDefIdentifier: author
+            languageCode: eng-GB
+            value:
+                -
+                    id: '1'
+                    name: 'Damien Pobel'
+                    email: me@ez.no
+        -
+            fieldDefIdentifier: pois
+            languageCode: eng-GB
+            value:
+                destinationContentIds:
+                    - 136
+                    - 137
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__bike_ride__lookouts between coligny and montagna-le-reconduit'
+            type: content_id
+        -
+            name: 'ref_location__bike_ride__lookouts between coligny and montagna-le-reconduit'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: point_of_interest
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:13+01:00'
+        publicationDate: '2021-01-25T17:16:13+01:00'
+        remoteId: e2bcafb91f8a40bd170780734a9e177b
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 131
+        parentLocationRemoteId: null
+        locationRemoteId: 7492a09b08d3e1e9a6fef2d044673809
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Cross above Tarcia'
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>This is the cross that's above Tarcia in the hills.</para></section>
+                    
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 9/5/6/0/659-1-eng-GB/cross-tarcia.jpg
+                path: 9/5/6/0/659-1-eng-GB/cross-tarcia.jpg
+                alternativeText: ''
+                fileName: cross-tarcia.jpg
+                fileSize: 465308
+                imageId: 136-659-1
+                uri: /var/site/storage/images/9/5/6/0/659-1-eng-GB/cross-tarcia.jpg
+                inputUri: null
+                width: '1536'
+                height: '864'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: photo_legend
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>View of the top in the summer</para></section>
+                    
+        -
+            fieldDefIdentifier: place
+            languageCode: eng-GB
+            value:
+                latitude: 46.384895
+                longitude: 5.404414
+                address: Tarcia
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__point_of_interest__cross above tarcia'
+            type: content_id
+        -
+            name: 'ref_location__point_of_interest__cross above tarcia'
+            type: location_id
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: point_of_interest
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-01-25T17:16:13+01:00'
+        publicationDate: '2021-01-25T17:16:13+01:00'
+        remoteId: 91b10e537d31e0213e29ebb7cf0e2082
+        alwaysAvailable: true
+        section: 1
+        objectStates: {  }
+    location:
+        parentLocationId: 131
+        parentLocationRemoteId: null
+        locationRemoteId: 2b56603786bc0fc6e084585e616adac1
+        hidden: false
+        sortField: 2
+        sortOrder: 0
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: title
+            languageCode: eng-GB
+            value: 'Plateau de Vergongeat'
+        -
+            fieldDefIdentifier: description
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>﻿Vergongeat Plateau, located between Coligny and Poisoux, allows great views to see the Jura Mountains and the Mont Blanc.</para></section>
+                    
+        -
+            fieldDefIdentifier: photo
+            languageCode: eng-GB
+            value:
+                id: 4/6/6/0/664-1-eng-GB/vergongeat_full.jpg
+                path: 4/6/6/0/664-1-eng-GB/vergongeat_full.jpg
+                alternativeText: ''
+                fileName: vergongeat_full.jpg
+                fileSize: 29379
+                imageId: 137-664-1
+                uri: /var/site/storage/images/4/6/6/0/664-1-eng-GB/vergongeat_full.jpg
+                inputUri: null
+                width: '760'
+                height: '249'
+                additionalData: {  }
+        -
+            fieldDefIdentifier: photo_legend
+            languageCode: eng-GB
+            value:
+                xml: |
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Panorama view</para></section>
+                    
+        -
+            fieldDefIdentifier: place
+            languageCode: eng-GB
+            value: null
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__point_of_interest__plateau de vergongeat'
+            type: content_id
+        -
+            name: 'ref_location__point_of_interest__plateau de vergongeat'
+            type: location_id

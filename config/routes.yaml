@@ -1,0 +1,3 @@
+gobike_search:
+    path: /bikesearch
+    defaults: { _controller: 'App\Controller\SearchController::bikeRideSearch' }

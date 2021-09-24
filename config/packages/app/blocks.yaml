@@ -1,0 +1,26 @@
+ezplatform_page_fieldtype:
+    blocks:
+        contentlist:
+            views:
+                unordered_list:
+                    template: '@ezdesign/blocks/contentlist/unordered_list.html.twig'
+                    name: Bike ride list
+                    priority: -255
+        random_block:
+            name: Random
+            category: default
+            thumbnail: ''
+            views:
+                default:
+                    template: '@ezdesign/blocks/random_block/random.html.twig'
+                    priority: -255
+            attributes:
+                description:
+                    type: richtext
+                contentType:
+                    type: select
+                    options:
+                        choices:
+                            'Bike ride': bike_ride
+                            'Point of interest': point_of_interest
+

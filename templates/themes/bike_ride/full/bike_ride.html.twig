@@ -1,0 +1,97 @@
+{% extends '@ezdesign/pagelayout.html.twig' %}
+{% set page_title = ez_content_name(content) %}
+{% block content %}
+<section class="below-navbar">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="col-xs-12 text-center">
+                    <!-- Title here -->
+                    <h2 class="extra-padding-left">{{ ez_content_name(content) }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="below-navbar">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="col-xs-6">
+                    <strong>Starting Point</strong>
+                    <hr>
+                    <!-- Starting point here -->
+                    {{ ez_render_field(content, 'starting_point', {'parameters': { 'height': '330px', 'width': '100%','showInfo': false }}) }}
+                </div>
+                <div class="col-xs-6">
+                    <strong>End Point</strong>
+                    <hr>
+                    <!-- End point here -->
+                    {{ ez_render_field(content, 'ending_point', {'parameters': { 'height': '330px', 'width': '100%','showInfo': false }}) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-xs-10 col-xs-offset-1 padding-box">
+                <div class="col-xs-2">
+                    <div class="box-ride">
+                        <!-- Length here -->
+                        <h3 class="special-number"> {{ ez_field_value(content, 'length') }} km</h3>
+                        <p class="pre-small special-number special-number-margin"><strong> {{ ez_render_field(content, 'difficulty') }}</strong></p>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="col-xs-5">
+                        <!-- Author here -->
+                        <p>Created by: {{ ez_field_value(content, 'author')|upper }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 padding-box">
+                <div class="col-xs-10">
+                    <div class="col-xs-2 text-right">
+                        <p>Description:</p>
+                    </div>
+                    <div class="col-xs-10 text-justify">
+
+                        <!-- Photo here -->
+                        {{ ez_render_field(content, 'photo',{'parameters':{'alias':'bike_ride_main'}}) }}
+
+                        <!-- Description here -->
+                         {{ ez_render_field(content, 'description') }}
+
+{#                        {{ ez_render_field(content, 'pois')}}#}
+                        {{ ez_render_field(content, 'pois', {
+                            'template': _self
+                        }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block ezobjectrelationlist_field %}
+    {% if not ez_field_is_empty(content, field) %}
+        <h4 class="underscore">Point of Interests</h4>
+        {% for content_id in field.value.destinationContentIds %}
+            {% if parameters.available[content_id] %}
+                {{ render(controller(
+                    'ez_content:viewAction',
+                    {
+                        contentId: content_id,
+                        viewType: 'modal'
+                    }
+                )) }}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

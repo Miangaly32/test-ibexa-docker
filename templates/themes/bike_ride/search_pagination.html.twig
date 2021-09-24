@@ -1,0 +1,47 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% set page_title = 'Search for ' ~ search_text %}
+
+{% block content %}
+
+    <div class="below-navbar">
+        <section class="buttons">
+            <form action="{{ path('gobike_search') }}" method="get">
+                <div class="container">
+                    <div class="row regular-content-size">
+                        <div class="col-xs-6 col-xs-offset-3">
+                            <h4 class="center bottom">Find a Ride:</h4>
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" name="q" value="{{ search_text }}">
+                                <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <section class="list-group">
+        <div class="container">
+            {% if bike_rides|length %}
+                <div class="row">
+                    {% for bike_ride in bike_rides %}
+                        {% include '@ezdesign/line/unordered_list.html.twig' with {content: bike_ride} %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <strong>{{ 'No results were found for: '|trans }}{{ search_text }}</strong>
+            {% endif %}
+            <div class="pagination justify-content-end text-center" style="width:100%">
+                {% if bike_rides.haveToPaginate() %}
+                    {{ pagerfanta(bike_rides, 'ez') }}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,37 @@
+-- BIKE RIDE 1 --
+Title				Finnish coastline from Rauma to Pori
+Photo				saaristo.jpg
+Description
+Difficulty			Beginner
+Starting Point		Rauma, Finland
+Ending Point		Pori, Finland
+Length				54
+Author				Jan Doe<jandoe@example.com>
+
+-- BIKE RIDE 2 --
+Title				Baby tour of the Battenkill
+Photo				battenkill.jpg
+Description			Following on the route of the Battenkill, starting from Schueylerville and ending in Shushan this ride offers breathtaking views.
+Difficulty			Intermediate
+Starting Point		Schuylerville, NY, USA
+Ending Point		Shushan, NY, USA
+Length				37
+Author				Jedi Doe<jedidoe@example.com>
+
+-- BIKE RIDE 3 --
+Title				Meillonnas terrain track
+Photo				cabatane_full.jpg
+Description			This ride in the hills offers variety and spectacular scenery. Recommended for those seeking both a challenge and an opportunity to enjoy the views.
+Difficulty			Advanced
+Starting Point		Meillonnas, France
+Ending Point		Pressiat, France
+Length				18
+Author				John Doe <johndoe@example.com>
+
+-- POI 1 ---
+
+Title				Plateau de Vergongeat
+Photo				vergongeat_full.jpg
+Description			Vergongeat Plateau, located between Coligny and Poisoux, allows great views to see the Jura Mountains and the Mont Blanc.
+Photo legend		Panorama view
+Place				46.381999,5.371631

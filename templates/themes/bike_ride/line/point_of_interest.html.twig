@@ -1,0 +1,14 @@
+<div class="col-md-4">
+    <div class="card mb-4 box-shadow">
+        {{ ez_render_field(content,'photo')}}
+        <div class="card-body">
+            <h4 class="header-link-table"><a href="{{ path( "ez_urlalias", {"contentId": content.id} ) }}" target="_self">{{ ez_render_field(content,'title') }}</a></h4>
+            <p class="card-text"></p>
+            <div class="d-flex justify-content-between button-items-right">
+                <div class="btn-group">
+                    <a href="{{ path( "ez_urlalias", {"contentId": content.id} ) }}" target="_self"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

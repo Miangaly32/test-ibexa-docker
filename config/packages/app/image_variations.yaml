@@ -1,0 +1,8 @@
+ezplatform:
+    system:
+        default:
+            image_variations:
+                bike_ride_main:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [200, 150] }

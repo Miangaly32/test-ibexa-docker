@@ -1,0 +1,103 @@
+-
+    type: content
+    mode: create
+    metadata:
+        contentType: user
+        mainTranslation: eng-GB
+        creatorId: 14
+        modificationDate: '2021-06-04T11:26:04+00:00'
+        publicationDate: '2021-06-04T11:26:04+00:00'
+        remoteId: 64e83b3bea27a19acb13413e89a584be
+        alwaysAvailable: true
+        section: 2
+        objectStates: {  }
+    location:
+        parentLocationId: 14
+        parentLocationRemoteId: null
+        locationRemoteId: 39a8d3c3dd0ce9f03e20478b190cb06a
+        hidden: false
+        sortField: 1
+        sortOrder: 1
+        priority: 0
+    fields:
+        -
+            fieldDefIdentifier: first_name
+            languageCode: eng-GB
+            value: Editoruser1
+        -
+            fieldDefIdentifier: last_name
+            languageCode: eng-GB
+            value: Editoruser1
+        -
+            fieldDefIdentifier: user_account
+            languageCode: eng-GB
+            value:
+                hasStoredLogin: true
+                contentId: 129
+                login: Editoruser1
+                email: Editoruser1@example.com
+                passwordHash: $2y$10$IHrzftuxy63bjmJjou8UOuevH6XSJlxRxCYxDOlDLVwuANTzoV5N2
+                passwordHashType: '7'
+                passwordUpdatedAt: 1622805964
+                enabled: true
+                maxLogin: 0
+                plainPassword: null
+        -
+            fieldDefIdentifier: signature
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: image
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: name
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: salutation
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: customer_number
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: contact_number
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: customer_profile_data
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: budget_order
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: budget_month
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: ses_customer_group
+            languageCode: eng-GB
+            value: null
+        -
+            fieldDefIdentifier: ses_hastopay_vat
+            languageCode: eng-GB
+            value: true
+        -
+            fieldDefIdentifier: ses_display_vat
+            languageCode: eng-GB
+            value: true
+    actions: {  }
+    references:
+        -
+            name: 'ref__content__user__editoruser1 editoruser1'
+            type: content_id
+        -
+            name: 'ref_location__user__editoruser1 editoruser1'
+            type: location_id
+        -
+            name: 'ref_path__user__editoruser1 editoruser1'
+            type: path

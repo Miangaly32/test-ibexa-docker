@@ -1,0 +1,40 @@
+-
+    type: role
+    mode: update
+    match:
+        field: identifier
+        value: Editor
+    metadata:
+        identifier: Editor
+    policies:
+        -
+            module: user
+            function: login
+        -
+            module: url
+            function: '*'
+        -
+            module: content
+            function: read
+        -
+            module: content
+            function: create
+        -
+            module: content
+            function: edit
+            limitations:
+                -
+                    identifier: State
+                    values: ['1']
+        -
+            module: content
+            function: publish
+        -
+            module: content
+            function: versionread
+        -
+            module: content
+            function: versionremove
+        -
+            module: content
+            function: remove

@@ -1,0 +1,15 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+{% set page_title = ez_content_name(content) %}
+{% block content %}
+    <section class="below-navbar">
+        <div class="container">
+            <div class="row regular-content-size">
+                <div class="col-xs-10 col-xs-offset-1 row-padding">
+                    <div class="col-xs-12">
+                        {{ ez_render_field(content,'page') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

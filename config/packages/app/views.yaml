@@ -1,0 +1,59 @@
+# /config/packages/app/views.yaml
+ezdesign:
+    # You declare every available designs under 'design_list'
+    design_list:
+        app_design: ['bike_ride','simple']
+ezplatform:
+    system:
+        site:
+            design: 'app_design'
+            page_layout: '@ezdesign/pagelayout.html.twig'
+            content_view:
+                full:
+                    all_rides:
+                        controller: ez_query::contentQueryAction
+                        template: "@ezdesign/full/all_rides.html.twig"
+                        match:
+                            Id\Location: 130
+                        params:
+                            query:
+                                query_type: BikeRideList
+                                parameters:
+                                    content: '@=content'
+                                limit: 4
+                                assign_results_to: rides
+                    bike_ride:
+                        template: "@ezdesign/full/bike_ride.html.twig"
+                        match:
+                            Identifier\ContentType: ['bike_ride']
+                    landing_page:
+                        template: "@ezdesign/full/landing_page.html.twig"
+                        match:
+                            Identifier\ContentType: [landing_page]
+                    point_of_interest:
+                        controller: 'App\Controller\PointOfInterestController::pointOfInterestView'
+                        template: "@ezdesign/full/point_of_interest.html.twig"
+                        match:
+                            Identifier\ContentType: [ 'point_of_interest' ]
+                    articles:
+                        template: "@ezdesign/full/simple.html.twig"
+                        match:
+                            Id\Location: 141
+#                    simple:
+#                        template: "@ezdesign/full/simple.html.twig"
+#                        match: ~
+                modal:
+                    point_of_interest:
+                        template: '@ezdesign/modal/point_of_interest.html.twig'
+                        match:
+                            Identifier\ContentType: [ 'point_of_interest' ]
+
+                line:
+                    ride:
+                        template: '@ezdesign/line/bike_ride.html.twig'
+                        match:
+                            Identifier\ContentType: bike_ride
+                    point_of_interest:
+                        template: '@ezdesign/line/point_of_interest.html.twig'
+                        match:
+                            Identifier\ContentType: point_of_interest

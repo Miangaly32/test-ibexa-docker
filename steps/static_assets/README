@@ -1,0 +1,7 @@
+/steps/public/assets/images/:
+Images that are used 'as is' in templates.
+copy /steps/public/assets/images/ to  /public/assets/images/ folder.
+
+/steps/assets/:
+Assets that are processed by webpack encore.
+copy /steps/assets/ to /assets/ folder.
